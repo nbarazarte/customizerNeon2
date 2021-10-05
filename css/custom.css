@@ -10117,51 +10117,54 @@
 
 /*******************************************************************************************************************************************************/
 
-/*Colores:*/
-.blanco{
-	animation: neon3 1.5s ease-in-out infinite alternate;
-}
-
-.amarillo{
-	animation: neon3 1.5s ease-in-out infinite alternate;
+/*Colores de la animacion: (son los valores ocultos en el sumario)*/
+.rojo{
+  animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
 .durazno{
-	animation: neon3 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
-.naranja{
-	animation: neon5 1.5s ease-in-out infinite alternate;
+.ambar{
+  animation: neon3 1.5s ease-in-out infinite alternate;
 }
 
-.rojo{
-	animation: neon1 1.5s ease-in-out infinite alternate;
-}
-
-.verde{
+.limon{
 	animation: neon4 1.5s ease-in-out infinite alternate;
 }
 
-.azul{
-	animation: neon2 1.5s ease-in-out infinite alternate;
+.amarillo{
+	animation: neon5 1.5s ease-in-out infinite alternate;
 }
 
-.turquesa{
-	animation: neon7 1.5s ease-in-out infinite alternate;
-}
-
-.fucsia{
-	animation: neon8 1.5s ease-in-out infinite alternate;
-}
-
-.morado{
+.verde{
 	animation: neon6 1.5s ease-in-out infinite alternate;
 }
 
-.blanco{
-  animation: neon9 1.5s ease-in-out infinite alternate;
+.azul{
+	animation: neon7 1.5s ease-in-out infinite alternate;
 }
 
+.morado{
+  animation: neon8 1.5s ease-in-out infinite alternate;
+}
+
+.turquesa{
+	animation: neon9 1.5s ease-in-out infinite alternate;
+}
+
+.rosa{
+	animation: neon10 1.5s ease-in-out infinite alternate;
+}
+
+.blanco{
+  animation: neon11 1.5s ease-in-out infinite alternate;
+}
+
+.calido{
+  animation: neon12 1.5s ease-in-out infinite alternate;
+}
 /*
 .neon_effect p {
   text-align: center;
@@ -10209,85 +10212,112 @@
 */
 
 
-@keyframes neon1 {
+@keyframes neon1 {/*Rojo*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF0000, 0 0 35px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 75px #FF0000;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FC0200, 0 0 35px #FC0200, 0 0 40px #FC0200, 0 0 50px #FC0200, 0 0 75px #FC0200;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF0000, 0 0 9px #FF0000, 0 0 15px #FF0000, 0 0 20px #FF0000, 0 0 25px #FF0000;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FC0200, 0 0 9px #FC0200, 0 0 15px #FC0200, 0 0 20px #FC0200, 0 0 25px #FC0200;
   }
 }
 
-@keyframes neon2 {
+@keyframes neon2 {/*Durazno*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0000FF, 0 0 35px #0000FF, 0 0 40px #0000FF, 0 0 50px #0000FF, 0 0 75px #0000FF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF8B43, 0 0 35px #FF8B43, 0 0 40px #FF8B43, 0 0 50px #FF8B43, 0 0 75px #FF8B43;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #0000FF, 0 0 9px #0000FF, 0 0 15px #0000FF, 0 0 20px #0000FF, 0 0 25px #0000FF;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF8B43, 0 0 9px #FF8B43, 0 0 15px #FF8B43, 0 0 20px #FF8B43, 0 0 25px #FF8B43;
   }
 
 }
 
-@keyframes neon3 {/*Amarillo*/
+@keyframes neon3 {/*Ambar*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFF08, 0 0 35px #FFFF08, 0 0 40px #FFFF08, 0 0 50px #FFFF08, 0 0 75px #FFFF08;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FBB03B, 0 0 35px #FBB03B, 0 0 40px #FBB03B, 0 0 50px #FBB03B, 0 0 75px #FBB03B;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFF08, 0 0 9px #FFFF08, 0 0 15px #FFFF08, 0 0 20px #FFFF08, 0 0 25px #FFFF08;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FBB03B, 0 0 9px #FBB03B, 0 0 15px #FBB03B, 0 0 20px #FBB03B, 0 0 25px #FBB03B;
   }
 }
 
-@keyframes neon4 {/*Verde*/
+@keyframes neon4 {/*Limón*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #BDFF00, 0 0 35px #BDFF00, 0 0 40px #BDFF00, 0 0 50px #BDFF00, 0 0 75px #BDFF00;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #DFFB02, 0 0 35px #DFFB02, 0 0 40px #DFFB02, 0 0 50px #DFFB02, 0 0 75px #DFFB02;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #BDFF00, 0 0 9px #BDFF00, 0 0 15px #BDFF00, 0 0 20px #BDFF00, 0 0 25px #BDFF00;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #DFFB02, 0 0 9px #DFFB02, 0 0 15px #DFFB02, 0 0 20px #DFFB02, 0 0 25px #DFFB02;
   }
 }
 
-@keyframes neon5 {/*Naranja*/
+@keyframes neon5 {/*Amarillo*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFD800, 0 0 35px #FFD800, 0 0 40px #FFD800, 0 0 50px #FFD800, 0 0 75px #FFD800;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFE700, 0 0 35px #FFE700, 0 0 40px #FFE700, 0 0 50px #FFE700, 0 0 75px #FFE700;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFD800, 0 0 9px #FFD800, 0 0 15px #FFD800, 0 0 20px #FFD800, 0 0 25px #FFD800;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFE700, 0 0 9px #FFE700, 0 0 15px #FFE700, 0 0 20px #FFE700, 0 0 25px #FFE700;
   }	
 }
 
-@keyframes neon6 {/*Morado*/
+@keyframes neon6 {/*Verde*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF19FF, 0 0 35px #FF19FF, 0 0 40px #FF19FF, 0 0 50px #FF19FF, 0 0 75px #FF19FF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #13DD00, 0 0 35px #13DD00, 0 0 40px #13DD00, 0 0 50px #13DD00, 0 0 75px #13DD00;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF19FF, 0 0 9px #FF19FF, 0 0 15px #FF19FF, 0 0 20px #FF19FF, 0 0 25px #FF19FF;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #13DD00, 0 0 9px #13DD00, 0 0 15px #13DD00, 0 0 20px #13DD00, 0 0 25px #13DD00;
   }	
 }
 
-@keyframes neon7 {/*Celeste*/
+@keyframes neon7 {/*Azul*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00FFFF, 0 0 35px #00FFFF, 0 0 40px #00FFFF, 0 0 50px #00FFFF, 0 0 75px #00FFFF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #173FFF, 0 0 35px #173FFF, 0 0 40px #173FFF, 0 0 50px #173FFF, 0 0 75px #173FFF;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #00FFFF, 0 0 9px #00FFFF, 0 0 15px #00FFFF, 0 0 20px #00FFFF, 0 0 25px #00FFFF;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #173FFF, 0 0 9px #173FFF, 0 0 15px #173FFF, 0 0 20px #173FFF, 0 0 25px #173FFF;
   }
 }
 
-@keyframes neon8 {/*Fucsia*/
+@keyframes neon8 {/*Morado*/
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF00FF, 0 0 35px #FF00FF, 0 0 40px #FF00FF, 0 0 50px #FF00FF, 0 0 75px #FF00FF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #AA15F6, 0 0 35px #AA15F6, 0 0 40px #AA15F6, 0 0 50px #AA15F6, 0 0 75px #AA15F6;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF00FF, 0 0 9px #FF00FF, 0 0 15px #FF00FF, 0 0 20px #FF00FF, 0 0 25px #FF00FF;
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #AA15F6, 0 0 9px #AA15F6, 0 0 15px #AA15F6, 0 0 20px #AA15F6, 0 0 25px #AA15F6;
   }
 }
 
-@keyframes neon9 {/*blanco*/
+@keyframes neon9 {/*Turquesa*/
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00A8FF, 0 0 35px #00A8FF, 0 0 40px #00A8FF, 0 0 50px #00A8FF, 0 0 75px #00A8FF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #00A8FF, 0 0 9px #00A8FF, 0 0 15px #00A8FF, 0 0 20px #00A8FF, 0 0 25px #00A8FF;
+  }
+}
+
+@keyframes neon10 {/*Rosa*/
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF68B0, 0 0 35px #FF68B0, 0 0 40px #FF68B0, 0 0 50px #FF68B0, 0 0 75px #FF68B0;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FF68B0, 0 0 9px #FF68B0, 0 0 15px #FF68B0, 0 0 20px #FF68B0, 0 0 25px #FF68B0;
+  }
+}
+
+@keyframes neon11 {/*Blanco*/
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFFF, 0 0 35px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 75px #FFFFFF;
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFFFF, 0 0 9px #FFFFFF, 0 0 15px #FFFFFF, 0 0 20px #FFFFFF, 0 0 25px #FFFFFF;
+  }
+}
+
+@keyframes neon12 {/*Cálido*/
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFEB, 0 0 35px #FFFFEB, 0 0 40px #FFFFEB, 0 0 50px #FFFFEB, 0 0 75px #FFFFEB;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #FFFFEB, 0 0 9px #FFFFEB, 0 0 15px #FFFFEB, 0 0 20px #FFFFEB, 0 0 25px #FFFFEB;
   }
 }
 
@@ -10353,48 +10383,52 @@
 }
 
 /*colores*/
-.blancoColor{
-  background-image: url("../imagenes/colores/blanco.jpg");
-}
-
-.amarilloColor{
-  background-image: url("../imagenes/colores/amarillo.jpg");
+.rojoColor{
+  background-image: url("../imagenes/nuevosColores/rojo.png");
 }
 
 .duraznoColor{
-  background-image: url("../imagenes/colores/durazno.jpg");
+  background-image: url("../imagenes/nuevosColores/durazno.png");
 }
 
-.naranjaColor{
-  background-image: url("../imagenes/colores/naranja.jpg");
+.ambarColor{
+  background-image: url("../imagenes/nuevosColores/ambar.png");
 }
 
-.rojoColor{
-  background-image: url("../imagenes/colores/rojo.jpg");
+.limonColor{
+  background-image: url("../imagenes/nuevosColores/limon.png");
+}
+
+.amarilloColor{
+  background-image: url("../imagenes/nuevosColores/amarillo.png");
 }
 
 .verdeColor{
-  background-image: url("../imagenes/colores/verde.jpg");
+  background-image: url("../imagenes/nuevosColores/verde.png");
 }
 
 .azulColor{
-  background-image: url("../imagenes/colores/azul.jpg");
-}
-
-.turquesaColor{
-  background-image: url("../imagenes/colores/turquesa.jpg");
+  background-image: url("../imagenes/nuevosColores/azul.png");
 }
 
 .moradoColor{
-  background-image: url("../imagenes/colores/morado.jpg");
+  background-image: url("../imagenes/nuevosColores/morado.png");
 }
 
-.fucsiaColor{
-  background-image: url("../imagenes/colores/fucsia.jpg");
+.turquesaColor{
+  background-image: url("../imagenes/nuevosColores/turquesa.png");
+}
+
+.rosaColor{
+  background-image: url("../imagenes/nuevosColores/rosa.png");
 }
 
 .blancoColor{
-  background-image: url("../imagenes/colores/blanco.png");
+  background-image: url("../imagenes/nuevosColores/blanco.png");
+}
+
+.calidoColor{
+  background-image: url("../imagenes/nuevosColores/calido.png");
 }
 
 /*imagen radio button*/
