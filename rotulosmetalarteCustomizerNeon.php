@@ -114,6 +114,10 @@ function cn_set_default_options() {
         add_option( 'cn_precio_4872', '50.00' );
     }
 
+    if ( get_option( 'cn_precio_metro_neon' ) === false ) {
+        add_option( 'cn_precio_metro_neon', '8.00' );
+    }
+
 }
 
 #Agregar esta condiguración al menu
@@ -148,6 +152,7 @@ function cn_genera_pagina() {
   $cn_precio_sinsujecion          = get_option( 'cn_precio_sinsujecion' ) ;
   $cn_precio_sietediaslaborales   = get_option( 'cn_precio_sietediaslaborales' ) ;
   $cn_precio_4872                 = get_option( 'cn_precio_4872' ) ;
+  $cn_precio_metro_neon           = get_option( 'cn_precio_metro_neon' ) ;
 
   require('formularioAdmin/configuracionesForm.php');
 }
@@ -181,6 +186,7 @@ function cn_guardar_ga() {
     $cn_precio_sinsujecion          = sanitize_text_field( $_POST['cn_precio_sinsujecion'] );
     $cn_precio_sietediaslaborales   = sanitize_text_field( $_POST['cn_precio_sietediaslaborales'] );
     $cn_precio_4872                 = sanitize_text_field( $_POST['cn_precio_4872'] );
+    $cn_precio_metro_neon           = sanitize_text_field( $_POST['cn_precio_metro_neon'] );
 
     // Guardar en la base de datos
     update_option( 'cn_id_producto_personalizado', $cn_id_producto_personalizado );
@@ -200,6 +206,7 @@ function cn_guardar_ga() {
     update_option( 'cn_precio_sinsujecion', $cn_precio_sinsujecion );
     update_option( 'cn_precio_sietediaslaborales', $cn_precio_sietediaslaborales );
     update_option( 'cn_precio_4872', $cn_precio_4872 );
+    update_option( 'cn_precio_metro_neon', $cn_precio_metro_neon );
 
     // Regresamos a la pagina de ajustes
     wp_redirect(
@@ -374,6 +381,7 @@ function iconic_output_engraving_field() {
       $cn_precio_sinsujecion          = get_option( 'cn_precio_sinsujecion' ) ;
       $cn_precio_sietediaslaborales   = get_option( 'cn_precio_sietediaslaborales' ) ;
       $cn_precio_4872                 = get_option( 'cn_precio_4872' ) ;
+      $cn_precio_metro_neon           = get_option( 'cn_precio_metro_neon' ) ;
 
       require('formularioCustomizer.php');
 

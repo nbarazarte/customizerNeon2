@@ -68,6 +68,7 @@
       </div>
       <input type="hidden" class="form-control" id="costoTransformador" value="<?php echo esc_html($costoTransformador);?>" readonly="yes">
       <input type="hidden" class="form-control" id="iva" value="<?php echo esc_html($iva);?>" readonly="yes"> 
+      <input type="hidden" class="form-control" id="cn_precio_metro_neon" value="<?php echo esc_html($cn_precio_metro_neon);?>" readonly="yes">
 
  <div class="card" style="">
 

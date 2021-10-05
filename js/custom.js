@@ -167,11 +167,13 @@ function jQueryDoSomethingAJAX() {
 
     //console.log("-----------------------------------------------");
 
+    var cn_precio_metro_neon    = document.getElementById("cn_precio_metro_neon").value;
+
     traseraNeon     = Number(anchocm) * Number(alto) * Number(trasera);
     sujecionNeon    = Number(sujecionNeon);
     dimmerNeon      = Number(dimmerNeon);
     tiemposEntrega  = Number(tiemposEntrega);
-    tipoLetra       = (Number(anchoSVGCorreccion) / 100) * 8;
+    tipoLetra       = (Number(anchoSVGCorreccion) / 100) * Number(cn_precio_metro_neon);
     
     /*console.log("Total Trasera: " +anchocm +" x "+alto +" x "+ trasera +" = "+ traseraNeon.toFixed(3));
     console.log("Total sujecion Neon: " + sujecionNeon);

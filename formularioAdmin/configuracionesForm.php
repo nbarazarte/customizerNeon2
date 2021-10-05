@@ -100,6 +100,22 @@
         </div>
       </div>
 
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+
+            <h5 class="card-title">Precio metro de Neón</h5>
+
+              <div class="mb-3">
+                <label for="cn_precio_metro_neon" class="form-label">Valor:</label>
+                <input type="number" step=".01" class="form-control" id="cn_precio_metro_neon" name="cn_precio_metro_neon" value="<?php echo esc_html($cn_precio_metro_neon);?>" required/>
+                
+              </div>
+
+          </div>
+        </div>
+      </div>      
+
     </div>  
 
     <div class="row">
@@ -107,7 +123,7 @@
         <div class="card">
           <div class="card-body">
 
-            <h5 class="card-title">Trasera del Neon</h5>
+            <h5 class="card-title">Trasera del Neón</h5>
 
               <div class="mb-3">
                 <label for="cn_precio_metacrilato" class="form-label">Metacrilato:</label>
@@ -147,7 +163,7 @@
         <div class="card">
           <div class="card-body">
 
-            <h5 class="card-title">Sujeción del Neon</h5>
+            <h5 class="card-title">Sujeción del Neón</h5>
 
               <div class="mb-3">
                 <label for="cn_precio_ancladoalapared" class="form-label">Anclado a la pared:</label>
