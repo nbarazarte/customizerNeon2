@@ -220,7 +220,16 @@
 
               <figure class="figure">
 
-                <input  type="radio" name="colores" value="rojo" id="rojoColor" checked onchange="deshabiltarBotonCart()">
+                <input type="radio" name="colores" value="amarillo" id="amarilloColor" checked onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc-colores amarilloColor" for="amarilloColor"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMARILLO</figcaption>
+
+              </figure>                
+
+              <figure class="figure">
+
+                <input  type="radio" name="colores" value="rojo" id="rojoColor"  onchange="deshabiltarBotonCart()">
                 <label class="drinkcard-cc-colores rojoColor" for="rojoColor"></label>
 
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ROJO</figcaption>
@@ -253,17 +262,7 @@
                 <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">LIMÓN</figcaption>
 
               </figure>
-     
-
-              <figure class="figure">
-
-                <input type="radio" name="colores" value="amarillo" id="amarilloColor" onchange="deshabiltarBotonCart()"> 
-                <label class="drinkcard-cc-colores amarilloColor" for="amarilloColor"></label> 
-
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">AMARILLO</figcaption>
-
-              </figure>
-			  
+     		  
              <figure class="figure">
 
                 <input  type="radio" name="colores" value="verde" id="verdeColor" onchange="deshabiltarBotonCart()">
