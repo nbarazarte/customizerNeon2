@@ -3,7 +3,7 @@
 Plugin Name: Rotulos Metalarte Customizer Neon
 Plugin URI: https://www.rotulosmetalarte.es
 Description: Personalizador de anuncios de Neon
-Version: 1.0
+Version: 1.1
 Author: Neil Barazarte
 Author URI: https://www.ploshshop.com
 License: GPLv2
@@ -12,23 +12,28 @@ License: GPLv2
 //Archivos css y js propios del plugin:
 //include(plugin_dir_url(__FILE__).'funciones.php');
 
+//echo $_SERVER['REQUEST_URI'];
+if( $_SERVER['REQUEST_URI'] == '/rotulosmetalarte/producto/neon-flexible-personalizado-custom-neon-flex/'){
+//if( $_SERVER['REQUEST_URI'] == '/producto/neon-flexible-personalizado-custom-neon-flex/'){    
+
+    add_action( 'wp_enqueue_scripts', 'custom_styles_neon',10 );
+    add_action( 'wp_enqueue_scripts', 'custom_scripts_neon' );
+    add_action( 'wp_enqueue_scripts', 'browser_scripts');
+}
+
 // Register Style
-function custom_styles() {
+function custom_styles_neon() {
 
     wp_register_style( 'dv-custom', plugin_dir_url(__FILE__).'css/custom.css', false, '1.0' );
     wp_enqueue_style( 'dv-custom' );
-
 }
-add_action( 'wp_enqueue_scripts', 'custom_styles',10 );
 
 // Register Script
-function custom_scripts() {
+function custom_scripts_neon() {
 
     wp_register_script( 'main', plugin_dir_url(__FILE__).'js/custom.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'main' );
-
 }
-add_action( 'wp_enqueue_scripts', 'custom_scripts' );
 
 function browser_scripts() {
 
@@ -36,7 +41,6 @@ function browser_scripts() {
     wp_enqueue_script( 'browser' );
 
 }
-add_action('wp_enqueue_scripts', 'browser_scripts');
 
 # Agregar informacion predeterminada al activar el plugin
 //Este Script se correra en 3 momentos: Al activar por primera vez, al actualizar, al reactivar
