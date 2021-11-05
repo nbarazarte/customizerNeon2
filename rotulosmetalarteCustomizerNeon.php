@@ -13,8 +13,8 @@ License: GPLv2
 //include(plugin_dir_url(__FILE__).'funciones.php');
 
 //echo $_SERVER['REQUEST_URI'];
-if( $_SERVER['REQUEST_URI'] == '/rotulosmetalarte/producto/neon-flexible-personalizado-custom-neon-flex/'){
-//if( $_SERVER['REQUEST_URI'] == '/producto/neon-flexible-personalizado-custom-neon-flex/'){    
+if( $_SERVER['REQUEST_URI'] == '/proyecto/producto/neon-flexible-personalizado-custom-neon-flex/'){
+//if( $_SERVER['REQUEST_URI'] == '/producto/neon-flexible-personalizado-custom-neon-flex/'){ 
 
     add_action( 'wp_enqueue_scripts', 'custom_styles_neon',10 );
     add_action( 'wp_enqueue_scripts', 'custom_scripts_neon' );
@@ -342,11 +342,24 @@ function jnj_mi_funcion()
       Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
     </p>';
 
-    echo '<div id="caja">
-            <div class="neon_effect '.$fuente.' '.$color.' ">
-              '.$_POST['rotulo'].'
+ 
+echo '<div class="container">
+          <div id="caja" class="row justify-content-md-center">
+
+            <div id="muestra" class="col-md-auto neon_effect '.$fuente.' '.$color.' ">
+             '.$_POST['rotulo'].'
             </div>
-          </div>';  
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              
+              <label for="customRange1" class="form-label">Acercar/alejar texto</label>
+              <input type="range" class="form-range" id="customRange1" min="0" max="15" step="0.1" value="5" onchange="ajustarTamano(this.value)">
+            </div>
+          </div>
+        </div>';
 
   wp_die();
 }
@@ -421,23 +434,16 @@ function campos_ocultos_customizerNeon() {
 
       <div class="col-12 text-center">
 
-          <div class="fabify-button" style="cursor: pointer;">
-
-            <a id="myButton2" style="color: #fff;" onclick="jQueryDoSomethingAJAX()">
-              <i class="fas fa-magic"></i> Aplicar cambios
+           <div class="gem-button-container gem-button-position-center thegem-button-61835271a9da17668 lazy-loading  lazy-loading-end-animation">
+            <a id="myButton2" title="" class="gem-button gem-button-size-small gem-button-style-flat gem-button-text-weight-normal lazy-loading-item lazy-loading-item-drop-right" data-ll-effect="drop-right-without-wrap" style="text-decoration:none;border-radius: 0px; background-color: rgb(153, 34, 51); color: rgb(255, 255, 255);cursor: pointer;" onmouseleave="this.style.backgroundColor='#992233';this.style.color='#ffffff';" onmouseenter="this.style.backgroundColor='#172b3c';this.style.color='#ffffff';"  >
+            <i class="fas fa-magic"></i> APLICAR CAMBIOS
             </a>
-
           </div>
           <br/>
           <div id="precioOtraVez" style="position: relative; left: 30px;">
            
           </div>
           
-
-        <!--<a id="myButton2" style="color: #fff; background-color: #870D00" onclick="jQueryDoSomethingAJAX()" class="btn" role="button">
-          <i class="fas fa-magic"></i> 
-          Aplicar cambios
-        </a>-->
 
         <div id="myDIV">
           <i class="fas fa-hourglass-start"></i> Creando el nuevo diseño...
@@ -565,7 +571,30 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
   if ( empty( $cart_item['texto_rotulo'] ) ) {
     return $item_data;
   }
+    //echo "<pre>".var_dump($cart_item)."</pre>";
+    //echo $cart_item['product_id'];
 
+    $id_neon = get_option( 'cn_id_producto_personalizado' );
+
+    if($id_neon == $cart_item['product_id']){
+
+      $item_data[] = array(
+        'key'     => __( '', 'iconic' ),
+        'value'   => '',
+        'display' => '<b>Texto:</b><br/>'.wc_clean( $cart_item['texto_rotulo']).'<br/>'.
+                     '<b>Fuente:</b><br/>'.wc_clean( $cart_item['fuenteLetrasText']).'<br/>'.
+                     '<b>Altura (cm):</b><br/>'.wc_clean( $cart_item['alturacm']).'<br/>'.
+                     '<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
+                     '<b>Trasera del Neón:</b><br/>'.wc_clean( $cart_item['tipoTraseraSumario']).'<br/>'.
+                     '<b>Sujeción del Neón:</b><br/>'.wc_clean( $cart_item['tipoSujecionSumario']).'<br/>'.
+                     '<b>Dimmer:</b><br/>'.wc_clean( $cart_item['tipoDimmerSumario']).'<br/>'.
+                     '<b>Forma del Contorno:</b><br/>'.wc_clean( $cart_item['tipoContornoSumario']).'<br/>'.                     
+                     '<b>Color:</b><br/>'.wc_clean( $cart_item['colorSumario']).'<br/>'.
+                     '<b>Tiempos de Entrega:</b><br/>'.wc_clean( $cart_item['tiempoEntregaSumario']).'<br/>'.
+                     '<b>Sub Total:</b><br/>'.wc_clean( $cart_item['subTotalPrecio'])
+      ); 
+    }
+/*
   $item_data[] = array(
     'key'     => __( 'Texto rótulo', 'iconic' ),
     'value'   => wc_clean( $cart_item['texto_rotulo'] ),
@@ -590,14 +619,6 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
     'display' => '',
   );
   
-  /*
-    $item_data[] = array(
-      'key'     => __( 'Tamaño de letra', 'iconic' ),
-      'value'   => wc_clean( $cart_item['altocm'] ),
-      'display' => '',
-    );
-  */
-
   $item_data[] = array(
     'key'     => __( 'Trasera del Neon', 'iconic' ),
     'value'   => wc_clean( $cart_item['tipoTraseraSumario'] ),
@@ -633,33 +654,13 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
     'value'   => wc_clean( $cart_item['colorSumario'] ),
     'display' => '',
   ); 
-  
-  /*
-     $item_data[] = array(
-      'key'     => __( 'Longitud Path A', 'iconic' ),
-      'value'   => wc_clean( $cart_item['pathA'] ),
-      'display' => '',
-    ); 
-
-     $item_data[] = array(
-      'key'     => __( 'Longitud Path B', 'iconic' ),
-      'value'   => wc_clean( $cart_item['pathB'] ),
-      'display' => '',
-    );
-     
-     $item_data[] = array(
-      'key'     => __( 'Impuesto (gastos de envío)', 'iconic' ),
-      'value'   => wc_clean( $cart_item['impuesto'] ."%"),
-      'display' => '',
-    ); 
-  */
 
    $item_data[] = array(
     'key'     => __( 'Sub Total', 'iconic' ),
     'value'   => wc_clean( $cart_item['subTotalPrecio'] ." &euro;"),
     'display' => '',
   );       
-
+*/
   return $item_data;
 }
 

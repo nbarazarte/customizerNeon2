@@ -309,7 +309,6 @@ function textoRadio(input,name){
     document.getElementById(input).value = name;
 }
 
-
 function miToolTip(div,valor){
 
     document.getElementById('toolTip_'+div).style.visibility = "visible";
@@ -320,5 +319,9 @@ function miToolTipOut(div){
 
     //document.getElementById('toolTip_'+div).innerHTML = "";
     document.getElementById('toolTip_'+div).style.visibility = "hidden";
+}
 
+function ajustarTamano(valor){
+
+    document.getElementById('muestra').style.fontSize = valor+"em";
 }

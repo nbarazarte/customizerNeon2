@@ -116,7 +116,7 @@
                 <input onclick="textoRadio('tipoSujecion',this.id)" type="radio" name="sujecion" id="colgadocomouncuadro" value="<?php echo esc_html($cn_precio_colgadocomouncuadro);?>" onchange="deshabiltarBotonCart()">   
                 <label class="drinkcard-cc colgadocomouncuadro" for="colgadocomouncuadro"></label>
 
-                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SUJETO COMO <br/>UN CUADRO</figcaption>
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">SUJETO COMO UN CUADRO</figcaption>
 
               </figure>
 

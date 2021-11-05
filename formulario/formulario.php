@@ -36,30 +36,34 @@
           Neones Flexibles personalizados a tu medida: Nuestras letras de neón flexible vienen acompañadas de una trasera de metacrilato, madera, PVC que funciona como una base para sujetar el neón formando la palabra. Ofrecemos diferentes formas de sujeción colgado del techo fijo, fijado a la pared, o colgado con cable acerado como un cuadro, se puede quitar y poner. Mismo precio para cualquier color.
         </p>
 
-        <div id="caja">
-          <div class="neon_effect signatura_monoline_scriptRg amarillo">
-            Rótulos Metalarte
+        <div class="container">
+          <div id="caja" class="row justify-content-md-center">
+
+            <div id="muestra" class="col-md-auto neon_effect signatura_monoline_scriptRg amarillo">
+              Rótulos Metalarte
+            </div>
+
           </div>
-       </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              
+              <label for="customRange1" class="form-label">Acercar/alejar texto</label>
+              <input type="range" class="form-range" id="customRange1" min="0" max="15" step="0.1" value="3" onchange="ajustarTamano(this.value)">
+            </div>
+          </div>
+        </div>
 
       </div>
-      <br/>
+
+     
       <div class="col-12 text-center">
 
-          <div class="fabify-button" style="cursor: pointer;">
-            <!--<a href="https://www.rotulosmetalarte.es/myaccount/" target="_blank">
-              <i class="fa fa-user" aria-hidden="true"></i> Mi usuario
-            </a>-->
-
-            <a id="myButton" style="color: #ffffff">
-              <i class="fas fa-magic"></i> Aplicar cambios
-            </a>            
-          </div>
-
-        <!--<a id="myButton" style="color: #fff; background-color: #870D00" onclick="" class="btn" role="button">
-          <i class="fas fa-magic"></i> Aplicar cambios
+      <div class="gem-button-container gem-button-position-center thegem-button-61835271a9da17668 lazy-loading  lazy-loading-end-animation">
+        <a id="myButton" title="" class="gem-button gem-button-size-small gem-button-style-flat gem-button-text-weight-normal lazy-loading-item lazy-loading-item-drop-right" data-ll-effect="drop-right-without-wrap" style="text-decoration:none;border-radius: 0px; background-color: rgb(153, 34, 51); color: rgb(255, 255, 255);cursor: pointer;" onmouseleave="this.style.backgroundColor='#992233';this.style.color='#ffffff';" onmouseenter="this.style.backgroundColor='#172b3c';this.style.color='#ffffff';"  >
+        <i class="fas fa-magic"></i> APLICAR CAMBIOS
         </a>
-      -->
+      </div>
 
         <div id="myDIV">
           <i class="fas fa-hourglass-start"></i> Creando el nuevo diseño...
