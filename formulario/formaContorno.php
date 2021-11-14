@@ -1,8 +1,6 @@
     <div class="row">
 
-
-
-      <div class="col-sm-6">
+      <div class="col-sm-12">
 
         <div class="card" style="border: 0;">
           <div class="card-body" style="background-color: #D3D3D3">
@@ -70,7 +68,6 @@
 
       </div> 
 
-
       <div class="col-sm-6">
         
         <div class="card" style="border: 0;">
@@ -127,6 +124,49 @@
         </div>              
 
       </div>  
+
+      <div class="col-sm-6">
+
+        <div class="card" style="border: 0;">
+          <div class="card-body" style="background-color: #D3D3D3">
+            
+            <label>Conexión de Corriente</label>             
+            <div class="cc-selector">
+
+
+              <figure class="figure">
+
+                <input type="radio" name="conexiones" id="arriba" value="arriba" checked onchange="deshabiltarBotonCart()" > 
+                <label class="drinkcard-cc arriba" for="arriba"></label> 
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">ARRIBA  </figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input  type="radio" name="conexiones" id="abajo" value="abajo" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc abajo" for="abajo"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">ABAJO</figcaption>
+
+              </figure>
+
+              <figure class="figure">
+
+                <input type="radio" name="conexiones" id="centro" value="centro" onchange="deshabiltarBotonCart()"> 
+                <label class="drinkcard-cc centro" for="centro"></label>
+
+                <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 2px;">CENTRO</figcaption>
+
+              </figure>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
 
       <div class="col-sm-6">
 
@@ -348,10 +388,6 @@
       </div>            
 
     </div>
-
-
-
-   
 
 <br/>
 

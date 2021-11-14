@@ -464,6 +464,7 @@ function campos_ocultos_customizerNeon() {
       <input type="hidden" id="tipoDimmerSumario" name="tipoDimmerSumario" value="" readonly="yes">
       <input type="hidden" id="tiempoEntregaSumario" name="tiempoEntregaSumario" value="" readonly="yes">
       <input type="hidden" id="tipoContornoSumario" name="tipoContornoSumario" value="" readonly="yes">
+      <input type="hidden" id="tipoConexionSumario" name="tipoConexionSumario" value="" readonly="yes">
       <input type="hidden" id="colorSumario" name="colorSumario" value="" readonly="yes">
       <input type="hidden" id="impuesto" name="impuesto" value="" readonly="yes">
       <input type="hidden" id="subTotalPrecio" name="subTotalPrecio" value="" readonly="yes">
@@ -504,6 +505,7 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   $tipoDimmerSumario    = filter_input( INPUT_POST, 'tipoDimmerSumario' );  
   $tiempoEntregaSumario = filter_input( INPUT_POST, 'tiempoEntregaSumario' ); 
   $tipoContornoSumario  = filter_input( INPUT_POST, 'tipoContornoSumario'  ); 
+  $tipoConexionSumario  = filter_input( INPUT_POST, 'tipoConexionSumario'  ); 
   $colorSumario         = filter_input( INPUT_POST, 'colorSumario'         );
   $impuesto             = filter_input( INPUT_POST, 'impuesto'         );
   $subTotalPrecio       = filter_input( INPUT_POST, 'subTotalPrecio'         );
@@ -547,6 +549,7 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   $cart_item_data['tipoDimmerSumario']    = $tipoDimmerSumario;
   $cart_item_data['tiempoEntregaSumario'] = $tiempoEntregaSumario;
   $cart_item_data['tipoContornoSumario']  = $tipoContornoSumario;
+  $cart_item_data['tipoConexionSumario']  = $tipoConexionSumario;
   $cart_item_data['colorSumario']         = $colorSumario;
   $cart_item_data['impuesto']             = $impuesto;
   $cart_item_data['subTotalPrecio']       = $subTotalPrecio;
@@ -588,7 +591,8 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
                      '<b>Trasera del Neón:</b><br/>'.wc_clean( $cart_item['tipoTraseraSumario']).'<br/>'.
                      '<b>Sujeción del Neón:</b><br/>'.wc_clean( $cart_item['tipoSujecionSumario']).'<br/>'.
                      '<b>Dimmer:</b><br/>'.wc_clean( $cart_item['tipoDimmerSumario']).'<br/>'.
-                     '<b>Forma del Contorno:</b><br/>'.wc_clean( $cart_item['tipoContornoSumario']).'<br/>'.                     
+                     '<b>Forma del Contorno:</b><br/>'.wc_clean( $cart_item['tipoContornoSumario']).'<br/>'.  
+                     '<b>Conexión de Corriente:</b><br/>'.wc_clean( $cart_item['tipoConexionSumario']).'<br/>'.                     
                      '<b>Color:</b><br/>'.wc_clean( $cart_item['colorSumario']).'<br/>'.
                      '<b>Tiempos de Entrega:</b><br/>'.wc_clean( $cart_item['tiempoEntregaSumario']).'<br/>'.
                      '<b>Sub Total:</b><br/>'.wc_clean( $cart_item['subTotalPrecio'])
@@ -743,6 +747,12 @@ function plugin_republic_checkout_create_order_line_item( $item, $cart_item_key,
   $values['tipoContornoSumario'],
   true
  ); 
+
+  $item->add_meta_data(
+  __( 'Conexión de Corriente', 'iconic' ),
+  $values['tipoConexionSumario'],
+  true
+ );   
 
   $item->add_meta_data(
   __( 'Color', 'iconic' ),

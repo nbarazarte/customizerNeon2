@@ -41,6 +41,17 @@ function jQueryDoSomethingAJAX() {
 
     var contorno = txt;
 
+    var conexiones = document.getElementsByName("conexiones");
+    var txt = "";
+    var i;
+    for (i = 0; i < conexiones.length; i++) {
+        if (conexiones[i].checked) {
+          txt = conexiones[i].value;
+        }
+    }
+
+    var conexion = txt;    
+
     var traseraneon = document.getElementsByName("traseraneon");
     var txt = "";
     var i;
@@ -207,6 +218,7 @@ function jQueryDoSomethingAJAX() {
         'fuenteLetras': fuenteLetras,
         'tiemposEntrega': tiemposEntrega,
         'contorno': contorno,
+        'conexion': conexion,
         'trasera': trasera,
         'tipoTrasera': tipoTrasera,
         'sujecionNeon': sujecionNeon,
@@ -277,6 +289,7 @@ function jQueryDoSomethingAJAX() {
         document.getElementById('tipoDimmerSumario').value       = tipoDimmer;
         document.getElementById('tiempoEntregaSumario').value    = tiemposEntregaText;
         document.getElementById('tipoContornoSumario').value     = contorno;
+        document.getElementById('tipoConexionSumario').value     = conexion;
         document.getElementById('colorSumario').value            = color;
         document.getElementById('pathA').value                   = anchoSVG;
         document.getElementById('pathB').value                   = anchoSVGCorreccion.toFixed(3);

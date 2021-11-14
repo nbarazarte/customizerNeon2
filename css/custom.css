@@ -10328,6 +10328,19 @@ text-align: center;
 }
 
 
+/*conexión*/
+.arriba{
+  background-image: url("../imagenes/contorno/rectangular.png");
+}
+
+.abajo{
+  background-image: url("../imagenes/contorno/redondo.png");
+}
+
+.centro{
+  background-image: url("../imagenes/contorno/personalizado.png");
+}
+
 /*contorno*/
 .rectangular{
   background-image: url("../imagenes/contorno/rectangular.png");
