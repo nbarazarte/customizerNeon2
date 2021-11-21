@@ -14,9 +14,18 @@ function jQueryDoSomethingAJAX() {
     // Preparamos los parámetros para la petición..
     //var formulario = document.forms.namedItem("customizerNeon");
 
-    var rotulo = document.getElementById('rotulo').value
-    var alto = document.getElementById('alto').value;
-    var ancho = document.getElementById('ancho').value;
+    //Línea 1:
+    var rotulo  = document.getElementById('rotulo').value
+    var alto    = document.getElementById('alto').value; // Es un campo oculto luego de Tamaño de la letra
+    var ancho   = document.getElementById('ancho').value;
+
+    //Línea 2:
+    var rotulo2  = document.getElementById('rotulo2').value
+    var ancho2   = document.getElementById('ancho2').value;
+
+    //Línea 3:
+    var rotulo3  = document.getElementById('rotulo3').value
+    var ancho3   = document.getElementById('ancho3').value;        
 
     var x = document.getElementById("letra").selectedIndex;
     var y = document.getElementById("letra").options;
@@ -148,16 +157,30 @@ function jQueryDoSomethingAJAX() {
 
     var color = txt;
 
+    //Línea 1:
+    var anchocm     = document.getElementById("ancho").value;//ancho;///72/0.393701;
+    var alturacm    = document.getElementById("altura").value;
 
-    var anchocm = document.getElementById("ancho").value;//ancho;///72/0.393701;
+    //Línea 2:
+    var anchocm2    = document.getElementById("ancho2").value;//ancho;///72/0.393701;
+    var alturacm2   = document.getElementById("altura2").value;
 
-    var alturacm = document.getElementById("altura").value;
+    //Línea 3:
+    var anchocm3    = document.getElementById("ancho3").value;//ancho;///72/0.393701;
+    var alturacm3   = document.getElementById("altura3").value;
 
+    //ancho del SVG línea 1:
+    var anchoSVG    = document.getElementById('anchoSVG').value;
+    //ancho del SVG línea 2:
+    var anchoSVG2   = document.getElementById('anchoSVG2').value;
+    //ancho del SVG línea 3:
+    var anchoSVG3   = document.getElementById('anchoSVG3').value;
 
-    //ancho del SVG:
-    var anchoSVG = document.getElementById('anchoSVG').value;
-    var anchoSVGCorreccion = anchoSVG * 0.76;
-    var costoTransformador = Number(document.getElementById('costoTransformador').value);
+    var anchoSVGCorreccion  = anchoSVG * 0.76;
+    var anchoSVGCorreccion2 = anchoSVG2 * 0.76;
+    var anchoSVGCorreccion3 = anchoSVG3 * 0.76;
+
+    var costoTransformador  = Number(document.getElementById('costoTransformador').value);
 
     document.getElementById('impuesto').value = document.getElementById('iva').value;
     //Calculo el precio del rótulo y lo envío al campo oculto en el formulario del carrito:
@@ -174,17 +197,50 @@ function jQueryDoSomethingAJAX() {
     console.log("Tiempo entrega: "+ tiemposEntrega);
     console.log("Costo Transformador: "+ costoTransformador);*/
 
-
-
     //console.log("-----------------------------------------------");
 
     var cn_precio_metro_neon    = document.getElementById("cn_precio_metro_neon").value;
 
-    traseraNeon     = Number(anchocm) * Number(alto) * Number(trasera);
+    var altoTotal;
+
+    if ( (rotulo != "") && (rotulo2 == "") && (rotulo3 == "")){
+        var altoTotal = Number(alturacm);
+    }else if ( (rotulo != "") && (rotulo2 != "") && (rotulo3 == "")){
+        var altoTotal = Number(alturacm) * 2;
+    }else if ( (rotulo != "") && (rotulo2 != "") && (rotulo3 != "")){
+        var altoTotal = Number(alturacm) * 3;
+    }
+
+    var anchoMayor = 0;
+
+    for (var i = 0; i < 3; i++) {
+       
+       if ( Number(anchocm) > Number(anchoMayor) ){
+        var anchoMayor = anchocm;
+       }
+
+       if ( Number(anchocm2) > Number(anchoMayor) ){
+        var anchoMayor = anchocm2;
+       }
+
+       if ( Number(anchocm3) > Number(anchoMayor) ){
+        var anchoMayor = anchocm3;
+       }       
+
+    }
+
+    //console.log(anchoMayor);
+
+    traseraNeon     = Number(anchoMayor) * Number(altoTotal) * Number(trasera);
+    //traseraNeon     = Number(anchocm) * Number(alto) * Number(trasera);
+
     sujecionNeon    = Number(sujecionNeon);
     dimmerNeon      = Number(dimmerNeon);
     tiemposEntrega  = Number(tiemposEntrega);
+
     tipoLetra       = (Number(anchoSVGCorreccion) / 100) * Number(cn_precio_metro_neon);
+    tipoLetra2      = (Number(anchoSVGCorreccion2) / 100) * Number(cn_precio_metro_neon);
+    tipoLetra3      = (Number(anchoSVGCorreccion3) / 100) * Number(cn_precio_metro_neon);
     
     /*console.log("Total Trasera: " +anchocm +" x "+alto +" x "+ trasera +" = "+ traseraNeon.toFixed(3));
     console.log("Total sujecion Neon: " + sujecionNeon);
@@ -194,7 +250,7 @@ function jQueryDoSomethingAJAX() {
 
     //((Tipo de letra + trasera de neón + sujeción del neón + dimmer ) * 3) + tiempo de entrega
 
-    subTotalprecio     = ((tipoLetra + traseraNeon + sujecionNeon + dimmerNeon + costoTransformador) * 3) + tiemposEntrega ;
+    subTotalprecio     = ((tipoLetra + tipoLetra2 + tipoLetra3 + traseraNeon + sujecionNeon + dimmerNeon + costoTransformador) * 3) + tiemposEntrega ;
 
     //console.log("Sub total precio: "+ subTotalprecio);
     var iva = Number(document.getElementById('iva').value / 100);

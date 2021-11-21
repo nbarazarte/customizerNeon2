@@ -17,8 +17,19 @@
 
     <input id="font-url-input" type="hidden" readonly="yes" value="<?php echo plugin_dir_url( __FILE__ ). '../css/Fonts/signatura_monoline_script/signatura_monoline-webfont.woff'; ?>" />
   
+
     <div id="medida"> </div>
     <div id="result"> </div>
+
+
+    <div id="medida2"> </div>
+    <div id="result2"> </div>
+
+
+    <div id="medida3"> </div>
+    <div id="result3"> </div>   
+
+         
     
       <div id="response">
         
