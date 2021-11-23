@@ -347,7 +347,9 @@ echo '<div class="container">
           <div id="caja" class="row justify-content-md-center">
 
             <div id="muestra" class="col-md-auto neon_effect '.$fuente.' '.$color.' ">
-             '.$_POST['rotulo'].'
+             <p>'.$_POST['rotulo'].'</p><br/>
+             <p>'.$_POST['rotulo2'].'</p><br/>
+             <p>'.$_POST['rotulo3'].'</p>
             </div>
 
           </div>

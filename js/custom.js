@@ -269,6 +269,8 @@ function jQueryDoSomethingAJAX() {
     var data = {
         'action': 'jnjtest',
         'rotulo': rotulo,
+        'rotulo2': rotulo2,
+        'rotulo3': rotulo3,
         'alto': alto,
         'ancho': ancho,    
         'fuenteLetras': fuenteLetras,

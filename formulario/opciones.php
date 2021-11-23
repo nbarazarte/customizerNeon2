@@ -136,4 +136,6 @@
 
 <br/>
   <div id="errorAltoAncho" style="color: red; text-align: center;"></div>
+  <div id="errorAltoAncho2" style="color: red; text-align: center;"></div>
+  <div id="errorAltoAncho3" style="color: red; text-align: center;"></div>
 
