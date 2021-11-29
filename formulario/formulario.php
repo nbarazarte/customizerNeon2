@@ -42,9 +42,25 @@
         
         <div style="font-size: 10px;"> ENVÍO GRATUITO</div>
 
-        <h3 style="font-size: 24px;font-family: 'Open Sans', sans-serif;">Letras de Neón Personalizadas</h3>
+        <h3 style="font-size: 24px;font-family: 'Open Sans', sans-serif;">Rótulos de Neón Flex Led personalizados.</h3>
         <p style="text-align: justify;">
-          Neones Flexibles personalizados a tu medida: Nuestras letras de neón flexible vienen acompañadas de una trasera de metacrilato, madera, PVC que funciona como una base para sujetar el neón formando la palabra. Ofrecemos diferentes formas de sujeción colgado del techo fijo, fijado a la pared, o colgado con cable acerado como un cuadro, se puede quitar y poner. Mismo precio para cualquier color.
+          Puedes escoger la Tipografía, el tamaño, color, sujeción, corriente y trasera que más se adapte a tus necesidades.
+        </p>
+        <p style="text-align: justify;">
+          Somos Fabricantes, fabricamos en una semana, también frecemos la opción exprés de 72 horas de fabricación.
+        </p>
+        <p style="text-align: justify;">
+          Adicional, contamos con una colección de 150 diseños de neones prediseñados en nuestra tienda online.
+        </p>
+        <p style="text-align: justify;">
+          Puedes pagar a tres plazos con la financiera Klarna, comprando a través de nuestra tienda online.
+        </p>
+        <p style="text-align: justify;">
+          Los rótulos de neón Flexible se entregan con todos los soportes necesarios para su fácil instalación. Todos los neones incluyen un transformador para conectar a la corriente, también, incluyen un dimmer para regular la intensidad de la luz de neón y la forma de iluminación de este con un mando a distancia. 
+        </p>
+
+        <p style="text-align: justify;">
+          Si tienes alguna duda o quieres ayuda para personalizar tu neón puedes enviarnos un correo a <a href="mailto:consultas@rotulosmetalarte.es">consultas@rotulosmetalarte.es</a> o escribirnos al WhatsApp <a href="https://wa.link/vvyfn2" target="_blank">647002464</a>, con gusto te atenderemos. Si deseas ver nuestros trabajos realizados visita nuestro Instagram  <a href="https://www.instagram.com/rotulosmetalarte/" target="_blank">@rotulosmetalarte</a> También fabricamos logos personalizados. Contáctanos.         
         </p>
 
         <div class="container">
@@ -59,7 +75,7 @@
           <div class="row">
             <div class="col-md-12">
               
-              <label for="customRange1" class="form-label">Acercar/alejar texto</label>
+              <label for="customRange1" class="form-label">Acercar/alejar texto (Este control no altera las medidas) Es una referencia del orden de las palabras por línea.</label>
               <input type="range" class="form-range" id="customRange1" min="0" max="15" step="0.1" value="3" onchange="ajustarTamano(this.value)">
             </div>
           </div>
@@ -84,6 +100,9 @@
       <input type="hidden" class="form-control" id="costoTransformador" value="<?php echo esc_html($costoTransformador);?>" readonly="yes">
       <input type="hidden" class="form-control" id="iva" value="<?php echo esc_html($iva);?>" readonly="yes"> 
       <input type="hidden" class="form-control" id="cn_precio_metro_neon" value="<?php echo esc_html($cn_precio_metro_neon);?>" readonly="yes">
+
+      <input type="hidden" class="form-control" id="cn_precio_sietediaslaborales" value="<?php echo esc_html($cn_precio_sietediaslaborales);?>" readonly="yes">
+      <input type="hidden" class="form-control" id="cn_precio_4872" value="<?php echo esc_html($cn_precio_4872);?>" readonly="yes">
 
  <div class="card" style="">
 
@@ -113,6 +132,42 @@
 
           */
           ?>
+
+
+          <div class="col-sm-10">
+            
+            <div class="card" style="border: 0;">
+              <div class="card-body" style="background-color: #D3D3D3">
+                
+               <label>Tiempos de entrega</label>
+                <div class="cc-selector">
+                  <!-- el campo oculto esta en formaContorno-->
+
+                  <figure class="figure">
+
+                    <input onclick="" type="radio" name="opcionesTiempos" id="dias" value="7 días laborables" checked onchange="deshabiltarBotonCart()">
+                    <label class="drinkcard-cc metacrilato" for="dias"></label>
+
+                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">7 días laborables</figcaption>
+
+                  </figure>
+
+                  <figure class="figure">
+
+                    <input onclick="" type="radio" name="opcionesTiempos" id="horas" value="48 a 72 horas" onchange="deshabiltarBotonCart()">  
+                    <label class="drinkcard-cc metacrilato" for="horas"></label>
+
+                    <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">48 a 72 horas</figcaption>
+
+                  </figure>
+
+
+                </div>
+
+              </div>
+            </div>              
+
+          </div>           
         </div>
       
       </div>

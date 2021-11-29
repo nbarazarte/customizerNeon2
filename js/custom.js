@@ -33,11 +33,30 @@ function jQueryDoSomethingAJAX() {
     var fuenteLetrasText = y[x].text;
     var fuenteLetras = y[x].value;
 
+    /*
     var x = document.getElementById("tiempos").selectedIndex;
     var y = document.getElementById("tiempos").options;
     //alert("Index: " + y[x].index + " is " + y[x].text);
     var tiemposEntregaText = y[x].text;
     var tiemposEntrega = y[x].value;
+    */
+
+   var opcionesTiempos = document.getElementsByName("opcionesTiempos");
+    var txt = "";
+    var i;
+    for (i = 0; i < opcionesTiempos.length; i++) {
+        if (opcionesTiempos[i].checked) {
+          txt = opcionesTiempos[i].value;
+        }
+    }
+    
+    var tiemposEntregaText = txt;
+
+    if(tiemposEntregaText == "7 días laborables"){
+        var tiemposEntrega = document.getElementById('cn_precio_sietediaslaborales').value;
+    }else{
+        var tiemposEntrega = document.getElementById('cn_precio_4872').value;
+    }
 
     var contornos = document.getElementsByName("contornos");
     var txt = "";
@@ -251,7 +270,7 @@ function jQueryDoSomethingAJAX() {
     //((Tipo de letra + trasera de neón + sujeción del neón + dimmer ) * 3) + tiempo de entrega
 
     subTotalprecio     = ((tipoLetra + tipoLetra2 + tipoLetra3 + traseraNeon + sujecionNeon + dimmerNeon + costoTransformador) * 3) + tiemposEntrega ;
-
+    
     //console.log("Sub total precio: "+ subTotalprecio);
     var iva = Number(document.getElementById('iva').value / 100);
 
@@ -271,22 +290,8 @@ function jQueryDoSomethingAJAX() {
         'rotulo': rotulo,
         'rotulo2': rotulo2,
         'rotulo3': rotulo3,
-        'alto': alto,
-        'ancho': ancho,    
         'fuenteLetras': fuenteLetras,
-        'tiemposEntrega': tiemposEntrega,
-        'contorno': contorno,
-        'conexion': conexion,
-        'trasera': trasera,
-        'tipoTrasera': tipoTrasera,
-        'sujecionNeon': sujecionNeon,
-        'tipoSujecion': tipoSujecion,
-        'dimmerNeon': dimmerNeon,
         'color': color,
-        'anchocm': anchocm,
-        'fuenteLetrasText': fuenteLetrasText,
-        'tiemposEntregaText': tiemposEntregaText,
-        'subTotalprecio': subTotalprecio.toFixed(2),
         'precioFinal': precioFinal.toFixed(2),
 
     };
@@ -336,10 +341,15 @@ function jQueryDoSomethingAJAX() {
         document.getElementById('precio_final_rotulo').value     = precioFinal.toFixed(2);
         document.getElementById('subTotalPrecio').value          = subTotalprecio.toFixed(2);
         document.getElementById('texto_rotulo').value            = rotulo;
+        document.getElementById('texto_rotulo2').value           = rotulo2;
+        document.getElementById('texto_rotulo3').value           = rotulo3;
         document.getElementById('fuenteLetrasText').value        = fuenteLetrasText;
-        document.getElementById('anchocm').value                 = anchocm;
-        
-        document.getElementById('alturacm').value                 = alturacm;
+
+        //document.getElementById('anchocm').value                 = anchocm;        
+        //document.getElementById('alturacm').value                 = alturacm;
+
+        document.getElementById('anchocm').value                 = anchoMayor;        
+        document.getElementById('alturacm').value                 = altoTotal;        
 
         document.getElementById('altocm').value                  = alto;
         document.getElementById('tipoTraseraSumario').value      = tipoTrasera;

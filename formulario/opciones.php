@@ -37,7 +37,7 @@
   </div>
 
   <div class="col-sm-4">
-
+<!--
     <label for="alto">Tiempos de Entrega:</label>
     <select for="tiempos" class="form-select" id="tiempos" onchange="deshabiltarBotonCart()" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
@@ -45,7 +45,7 @@
       <option value="<?php echo esc_html($cn_precio_sietediaslaborales);?>">7 días (laborales)</option>
       <option value="<?php echo esc_html($cn_precio_4872);?>">48 a 72 horas</option>
     </select>
-
+-->
   </div>
 
   <div class="col-sm-4">

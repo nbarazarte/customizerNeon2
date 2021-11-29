@@ -10345,49 +10345,49 @@ text-align: center;
 
 /*conexión*/
 .arriba{
-  background-image: url("../imagenes/contorno/rectangular.png");
+  background-image: url("../imagenes/corriente/arriba.png");
 }
 
 .abajo{
-  background-image: url("../imagenes/contorno/redondo.png");
+  background-image: url("../imagenes/corriente/abajo.png");
 }
 
 .centro{
-  background-image: url("../imagenes/contorno/personalizado.png");
+  background-image: url("../imagenes/corriente/centro.png");
 }
 
 /*contorno*/
 .rectangular{
-  background-image: url("../imagenes/contorno/rectangular.png");
+  background-image: url("../imagenes/contorno/rectangularNuevo.png");
 }
 
 .redondo{
-  background-image: url("../imagenes/contorno/redondo.png");
+  background-image: url("../imagenes/contorno/redondoNuevo.png");
 }
 
 .personalizado{
-  background-image: url("../imagenes/contorno/personalizado.png");
+  background-image: url("../imagenes/contorno/personalizadoNuevo.png");
 }
 
 /*trasera*/
 .metacrilato{
-  background-image: url("../imagenes/trasera/metacrilato.png");
+  background-image: url("../imagenes/trasera/metacrilatoNuevo.png");
 }
 
 .pvc{
-  background-image: url("../imagenes/trasera/pvc.png");
+  background-image: url("../imagenes/trasera/pvcNuevo.png");
 }
 
 .dm{
-  background-image: url("../imagenes/trasera/dm.png");
+  background-image: url("../imagenes/trasera/dmNuevo.png");
 }
 
 .contrachapado{
-  background-image: url("../imagenes/trasera/contrachapado.png");
+  background-image: url("../imagenes/trasera/contrachapadoNuevo.png");
 }
 
 .maderadepino{
-  background-image: url("../imagenes/trasera/maderadepino.png");
+  background-image: url("../imagenes/trasera/maderadepinoNuevo.png");
 }
 
 /*sujecion*/

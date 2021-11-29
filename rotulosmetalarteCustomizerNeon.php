@@ -223,73 +223,6 @@ function cn_guardar_ga() {
     );
     exit;
 }
-/*
-//Crear un filtro para modificar el contenido del articulo....
-add_filter( 'the_content', 'cn_agregar_anuncio' );
-
-function cn_agregar_anuncio ( $the_content ) {
-
-    global $wpdb;
-
-    $cn_pagina = get_option( 'cn_pagina' ) ;
-
-    $sql = "SELECT id FROM {$wpdb->prefix}posts WHERE post_title = '".$cn_pagina."' ";
-    $results = $wpdb->get_results( $sql, OBJECT );
-
-    foreach ($results as $key ) {
-
-      $id_pagina[] = $key->id;
-
-    }
-    //echo "--->".$id_pagina[0];
-    //die();
-
-    $pagina = $id_pagina[0];
-
-    if(!empty($pagina) ){
-
-
-    //Creamos una variable que contenga todo el contenido
-    //del articulo
-    //$articulo = $the_content;
-
-    //Solo inyectar el anuncio en los articulos
-    //if (is_singular() && is_main_query() && in_the_loop()){
-    //if (is_page() && is_main_query() && in_the_loop()){
-    //if (is_home() && is_main_query() && in_the_loop()){
-    if (is_page($pagina) && is_main_query() && in_the_loop()){
-      // Al final del articulo agregar el codigo del anuncio....
-      //$articulo .= '<div class="ads"> *** Aquí va el formulario *** </div>';
-
-
-      // Conseguir el valor del Precio base de todos los elementos:
-      $cn_id_producto_personalizado   = get_option( 'cn_id_producto_personalizado' ) ;
-      $cn_pagina                      = get_option( 'cn_pagina' ) ;
-      $cn_precio_base                 = get_option( 'cn_precio_base' ) ;
-      $cn_precio_dimmer               = get_option( 'cn_precio_dimmer' ) ;
-      $cn_precio_metacrilato          = get_option( 'cn_precio_metacrilato' ) ;
-      $cn_precio_dm                   = get_option( 'cn_precio_dm' ) ;
-      $cn_precio_pvc                  = get_option( 'cn_precio_pvc' ) ;
-      $cn_precio_contraenchapado      = get_option( 'cn_precio_contraenchapado' ) ;
-      $cn_precio_maderadepino         = get_option( 'cn_precio_maderadepino' ) ;
-      $cn_precio_ancladoalapared      = get_option( 'cn_precio_ancladoalapared' ) ;
-      $cn_precio_colgadoaltecho       = get_option( 'cn_precio_colgadoaltecho' ) ;
-      $cn_precio_colgadocomouncuadro  = get_option( 'cn_precio_colgadocomouncuadro' ) ;
-      $cn_precio_sinsujecion          = get_option( 'cn_precio_sinsujecion' ) ;
-      $cn_precio_sietediaslaborales   = get_option( 'cn_precio_sietediaslaborales' ) ;
-      $cn_precio_4872                 = get_option( 'cn_precio_4872' ) ;
-
-      require('formularioCustomizer.php');
-    }
-
-
-  }
-    // siempre debe regresar el contenido que se desea mostrar
-    //return $articulo;
-    return;
-
-    wp_die();
-}*/
 
 add_action('wp_ajax_jnjtest', 'jnj_mi_funcion');
 add_action('wp_ajax_nopriv_jnjtest', 'jnj_mi_funcion');
@@ -298,34 +231,6 @@ add_action('wp_ajax_nopriv_jnjtest', 'jnj_mi_funcion');
 // en el formato que queramos..
 function jnj_mi_funcion()
 {
-
-  /*global $wpdb;
-  //echo '<pre style="color: #fff">'; print_r($_POST); echo '</pre>';
-  //$sql = "SELECT * FROM {$wpdb->prefix}options WHERE option_name = 'cn_precio_base'";
-  $sql = "SELECT option_name, option_value FROM {$wpdb->prefix}options WHERE option_name LIKE '%cn_precio%'";
-  $results = $wpdb->get_results( $sql, OBJECT );
-
-  foreach ($results as $key => $valor) {
-
-    $res[$valor->option_name] = $valor->option_value;
-
-  }*/
-
-    //echo '<pre>'.print_r($res).'</pre><br/>';
-    //echo "Precio Base: ".$res['cn_precio_base']."<br/>";
-     
-
-    /*
-      echo "<b>Fuente de Letra: </b>". $_POST['fuenteLetrasText']."<br/>";
-      echo "<b>Ancho:</b> ". number_format($_POST['anchocm'],2,",",".")." cm <br/>";
-      echo "<b>Alto:</b> ".$_POST['alto']." cm <br/>";
-      echo "<b>Trasera del Neon:</b> ".$_POST['tipoTrasera']." ".number_format($traseraNeon,2,",",".")."&euro;<br/>";
-      echo "<b>Sujeción del Neon:</b> ".$_POST['tipoSujecion']." ".number_format($_POST['sujecionNeon'],2,",",".")."&euro;<br/>";
-      echo "<b>Dimmer (controlador de luz):</b> ".number_format($_POST['dimmerNeon'],2,",",".")."&euro;<br/>";
-      echo "<b>Tiempo de Entrega:</b> ".$_POST['tiemposEntregaText']." ".number_format($_POST['tiemposEntrega'],2,",",".")."&euro;<br/>";
-      echo "<b>Forma del Contorno: </b>". $_POST['contorno']."<br/>";
-      echo "<b>Color: </b>". $_POST['color']."<br/>";
-    */
 
     $fuente = $_POST['fuenteLetras'];
     $color = $_POST['color'];
@@ -336,11 +241,26 @@ function jnj_mi_funcion()
     </h1>
     <div style="font-size: 10px; color: #870D00">IVA incluido</div>
     <div style="font-size: 10px;">ENVÍO GRATUITO</div>
-    <h3 style="font-size: 24px;font-family: "Open Sans", sans-serif;">Letras de Neón Personalizadas</h3>
+    <h3 style="font-size: 24px;font-family: "Open Sans", sans-serif;">Rótulos de Neón Flex Led personalizados.</h3>
     <p style="text-align: justify;">
-      Neones personalizados, puedes seguirnos en nuestro perfil de Instagram para ver los trabajos realizados @RotulosMetalarte
-      Tres medidas a escoger, Puedes pedirnos un presupuesto personalizado si quieres  en caso de querer un Neón personalizado o con alguna medida diferente
-    </p>';
+          Puedes escoger la Tipografía, el tamaño, color, sujeción, corriente y trasera que más se adapte a tus necesidades.
+        </p>
+        <p style="text-align: justify;">
+          Somos Fabricantes, fabricamos en una semana, también frecemos la opción exprés de 72 horas de fabricación.
+        </p>
+        <p style="text-align: justify;">
+          Adicional, contamos con una colección de 150 diseños de neones prediseñados en nuestra tienda online.
+        </p>
+        <p style="text-align: justify;">
+          Puedes pagar a tres plazos con la financiera Klarna, comprando a través de nuestra tienda online.
+        </p>
+        <p style="text-align: justify;">
+          Los rótulos de neón Flexible se entregan con todos los soportes necesarios para su fácil instalación. Todos los neones incluyen un transformador para conectar a la corriente, también, incluyen un dimmer para regular la intensidad de la luz de neón y la forma de iluminación de este con un mando a distancia. 
+        </p>
+
+        <p style="text-align: justify;">
+          Si tienes alguna duda o quieres ayuda para personalizar tu neón puedes enviarnos un correo a <a href="mailto:consultas@rotulosmetalarte.es">consultas@rotulosmetalarte.es</a> o escribirnos al WhatsApp <a href="https://wa.link/vvyfn2" target="_blank">647002464</a>, con gusto te atenderemos. Si deseas ver nuestros trabajos realizados visita nuestro Instagram  <a href="https://www.instagram.com/rotulosmetalarte/" target="_blank">@rotulosmetalarte</a> También fabricamos logos personalizados. Contáctanos.         
+        </p>';
 
  
 echo '<div class="container">
@@ -357,7 +277,7 @@ echo '<div class="container">
           <div class="row">
             <div class="col-md-12">
               
-              <label for="customRange1" class="form-label">Acercar/alejar texto</label>
+              <label for="customRange1" class="form-label">Acercar/alejar texto (Este control no altera las medidas) Es una referencia del orden de las palabras por línea.</label>
               <input type="range" class="form-range" id="customRange1" min="0" max="15" step="0.1" value="5" onchange="ajustarTamano(this.value)">
             </div>
           </div>
@@ -455,11 +375,11 @@ function campos_ocultos_customizerNeon() {
 
       <input type="hidden" class="form-control" id="precio_final_rotulo" name="precio_final_rotulo" value="" readonly="yes">
       <input type="hidden" id="texto_rotulo" name="texto_rotulo" value="" readonly="yes">
+      <input type="hidden" id="texto_rotulo2" name="texto_rotulo2" value="" readonly="yes">
+      <input type="hidden" id="texto_rotulo3" name="texto_rotulo3" value="" readonly="yes">
       <input type="hidden" id="fuenteLetrasText" name="fuenteLetrasText" value="" readonly="yes">
       <input type="hidden" id="anchocm" name="anchocm" value="" readonly="yes">
-
       <input type="hidden" id="alturacm" name="alturacm" value="" readonly="yes">
-
       <input type="hidden" id="altocm" name="altocm" value="" readonly="yes">
       <input type="hidden" id="tipoTraseraSumario" name="tipoTraseraSumario" value="" readonly="yes">
       <input type="hidden" id="tipoSujecionSumario" name="tipoSujecionSumario" value="" readonly="yes">   
@@ -495,6 +415,8 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
   
   $precio_final_rotulo  = filter_input( INPUT_POST, 'precio_final_rotulo' );
   $texto_rotulo         = filter_input( INPUT_POST, 'texto_rotulo' );
+  $texto_rotulo2         = filter_input( INPUT_POST, 'texto_rotulo2' );
+  $texto_rotulo3         = filter_input( INPUT_POST, 'texto_rotulo3' );
   $fuenteLetrasText     = filter_input( INPUT_POST, 'fuenteLetrasText' );
   $anchocm              = filter_input( INPUT_POST, 'anchocm' );
 
@@ -540,6 +462,8 @@ function iconic_add_engraving_text_to_cart_item( $cart_item_data, $product_id, $
 
   
   $cart_item_data['texto_rotulo']         = $texto_rotulo;
+  $cart_item_data['texto_rotulo2']        = $texto_rotulo2;
+  $cart_item_data['texto_rotulo3']        = $texto_rotulo3;
   $cart_item_data['fuenteLetrasText']     = $fuenteLetrasText;
   $cart_item_data['anchocm']              = number_format($_POST['anchocm'],3,",",".");
 
@@ -586,7 +510,9 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
       $item_data[] = array(
         'key'     => __( '', 'iconic' ),
         'value'   => '',
-        'display' => '<b>Texto:</b><br/>'.wc_clean( $cart_item['texto_rotulo']).'<br/>'.
+        'display' => '<b>Línea 1:</b><br/>'.wc_clean( $cart_item['texto_rotulo']).'<br/>'.
+                     '<b>Línea 2:</b><br/>'.wc_clean( $cart_item['texto_rotulo2']).'<br/>'.
+                     '<b>Línea 3:</b><br/>'.wc_clean( $cart_item['texto_rotulo3']).'<br/>'.
                      '<b>Fuente:</b><br/>'.wc_clean( $cart_item['fuenteLetrasText']).'<br/>'.
                      '<b>Altura (cm):</b><br/>'.wc_clean( $cart_item['alturacm']).'<br/>'.
                      '<b>Ancho (cm):</b><br/>'.wc_clean( $cart_item['anchocm']).'<br/>'.
@@ -600,73 +526,7 @@ function iconic_display_engraving_text_cart( $item_data, $cart_item ) {
                      '<b>Sub Total:</b><br/>'.wc_clean( $cart_item['subTotalPrecio'])
       ); 
     }
-/*
-  $item_data[] = array(
-    'key'     => __( 'Texto rótulo', 'iconic' ),
-    'value'   => wc_clean( $cart_item['texto_rotulo'] ),
-    'display' => '',
-  ); 
 
-  $item_data[] = array(
-    'key'     => __( 'Fuente de letras', 'iconic' ),
-    'value'   => wc_clean( $cart_item['fuenteLetrasText'] ),
-    'display' => '',
-  );   
-
-  $item_data[] = array(
-    'key'     => __( 'Altura (cm)', 'iconic' ),
-    'value'   => wc_clean( $cart_item['alturacm'] ),
-    'display' => '',
-  );
-
-  $item_data[] = array(
-    'key'     => __( 'Ancho (cm)', 'iconic' ),
-    'value'   => wc_clean( $cart_item['anchocm'] ),
-    'display' => '',
-  );
-  
-  $item_data[] = array(
-    'key'     => __( 'Trasera del Neon', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoTraseraSumario'] ),
-    'display' => '',
-  );
-
-  $item_data[] = array(
-    'key'     => __( 'Sujeción del Neon', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoSujecionSumario'] ),
-    'display' => '',
-  );
-
-  $item_data[] = array(
-    'key'     => __( 'Dimmer', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoDimmerSumario'] ),
-    'display' => '',
-  );     
-
-  $item_data[] = array(
-    'key'     => __( 'Tiempo de Entrega', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tiempoEntregaSumario'] ),
-    'display' => '',
-  ); 
-
-  $item_data[] = array(
-    'key'     => __( 'Forma del Contorno', 'iconic' ),
-    'value'   => wc_clean( $cart_item['tipoContornoSumario'] ),
-    'display' => '',
-  );   
- 
-   $item_data[] = array(
-    'key'     => __( 'Color', 'iconic' ),
-    'value'   => wc_clean( $cart_item['colorSumario'] ),
-    'display' => '',
-  ); 
-
-   $item_data[] = array(
-    'key'     => __( 'Sub Total', 'iconic' ),
-    'value'   => wc_clean( $cart_item['subTotalPrecio'] ." &euro;"),
-    'display' => '',
-  );       
-*/
   return $item_data;
 }
 
@@ -697,8 +557,20 @@ function before_calculate_totals( $cart_obj ) {
 function plugin_republic_checkout_create_order_line_item( $item, $cart_item_key, $values, $order ) {
 
  $item->add_meta_data(
-  __( 'Texto rótulo', 'iconic' ),
+  __( 'Línea 1', 'iconic' ),
   $values['texto_rotulo'],
+  true
+ );
+
+  $item->add_meta_data(
+  __( 'Línea 2', 'iconic' ),
+  $values['texto_rotulo2'],
+  true
+ );
+
+  $item->add_meta_data(
+  __( 'Línea 3', 'iconic' ),
+  $values['texto_rotulo3'],
   true
  );
 
@@ -770,26 +642,3 @@ function plugin_republic_checkout_create_order_line_item( $item, $cart_item_key,
 
 }
 add_action( 'woocommerce_checkout_create_order_line_item', 'plugin_republic_checkout_create_order_line_item', 10, 5 );
-
-
-/**
- * Add custom cart item data to emails
- */
-
-/*
-function plugin_republic_order_item_name( $product_name, $item ) {
- if( isset( $item['pr_field'] ) ) {
-
-   $product_name .= sprintf(
-   '<ul><li>%s: %s</li></ul>',
-   __( 'Your name', 'plugin_republic' ),
-   esc_html( $item['pr_field'] )
-   );
-
- }
- return $product_name;
-
-}
-
-add_filter( 'woocommerce_order_item_name', 'plugin_republic_order_item_name', 10, 2 );
-*/
