@@ -29,10 +29,10 @@
   <div class="col-sm-4">
     
     <label for="altoAncho">Tamaño de la letra:</label>
-    <input type="number" step=".001" class="" id="altoAncho" min="8.086" max="32.929" value="11.000" style="height: 50px;padding: 3% 0;
+    <input type="number" step=".001" class="" id="altoAncho" min="8.086" max="32.929" value="8.086" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">  
-    <input type="hidden" class="form-range" id="alto" value="11.000" readonly="yes"> 
+    <input type="hidden" class="form-range" id="alto" value="8.086" readonly="yes"> 
 
   </div>
 
@@ -67,7 +67,7 @@
   <div class="col-sm-4">
       
     <label for="ancho">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 240 cm)</span>
-    <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="68.853" readonly="yes" style="height: 50px;padding: 3% 0;
+    <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="58.934" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">
     <input type="hidden" class="form-control" id="anchoSVG" value="0" readonly="yes">
