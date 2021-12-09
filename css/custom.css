@@ -10342,6 +10342,14 @@ text-align: center;
   }
 }
 
+/*tiempos de entrega*/
+.sieteDias{
+  background-image: url("../imagenes/tiemposEntrega/7dias.png");
+}
+
+.setentaydosHoras{
+  background-image: url("../imagenes/tiemposEntrega/72horas.png");
+}
 
 /*conexión*/
 .arriba{

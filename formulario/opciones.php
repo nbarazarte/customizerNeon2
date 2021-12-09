@@ -24,15 +24,17 @@
       <option style="font-family:'that i love you';font-size: 25px"value="thatiloveyou">That i love you</option>
     </select>
 
+    <input type="hidden" class="" id="tipoDeFuente" value="cursiva" readonly="yes">
+    <input type="hidden" class="" id="minimaAltura" value="50" readonly="yes"> 
   </div>
 
   <div class="col-sm-4">
     
-    <label for="altoAncho">Tamaño de la letra:</label>
-    <input type="number" step=".001" class="" id="altoAncho" min="8.086" max="32.929" value="8.086" style="height: 50px;padding: 3% 0;
+    <label for="altoAncho">Tamaño de la letra: <i class="fas fa-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Valor de referencia para calcular el alto y el ancho"></i></label>
+    <input type="number" step=".001" class="" id="altoAncho" min="36.755" max="100" value="36.755" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">  
-    <input type="hidden" class="form-range" id="alto" value="8.086" readonly="yes"> 
+    <input type="hidden" class="form-range" id="alto" value="36.755" readonly="yes"> 
 
   </div>
 
@@ -50,15 +52,15 @@
 
   <div class="col-sm-4">
       <label for="rotulo">Línea 1 (Escríbe tu texto aquí):</label>
-      <input type="text" class="" id="rotulo" placeholder="Tu texto" value="Rótulos Metalarte" onkeyup="deshabiltarBotonCart()" style="height: 50px;padding: 3% 0;
+      <input type="text" class="" id="rotulo" placeholder="Tu texto" value="Rótulos Neón" onkeyup="deshabiltarBotonCart()" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">  
   </div>
 
   <div class="col-sm-4">
     
-    <label for="altura">Alto: </label> <span style="font-size: 10px; color: red;">(mín. 11 cm)</span>
-    <input type="text" class="" id="altura" placeholder="Alto total texto cm" value="11.000" readonly="yes" style="height: 50px;padding: 3% 0;
+    <label for="altura">Alto: </label> <span id=minimaAltura2 style="font-size: 10px; color: red;">(mín. 50 cm)</span>
+    <input type="text" class="" id="altura" placeholder="Alto total texto cm" value="50.000" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">    
     
@@ -67,7 +69,7 @@
   <div class="col-sm-4">
       
     <label for="ancho">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 240 cm)</span>
-    <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="58.934" readonly="yes" style="height: 50px;padding: 3% 0;
+    <input type="text" class="" id="ancho" placeholder="Ancho total texto cm" value="192.926" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">
     <input type="hidden" class="form-control" id="anchoSVG" value="0" readonly="yes">
@@ -83,8 +85,8 @@
 
   <div class="col-sm-4">
     
-    <label for="altura2">Alto: </label> <span style="font-size: 10px; color: red;">(mín. 11 cm)</span>
-    <input type="text" class="" id="altura2" placeholder="Alto total texto cm" value="11.000" readonly="yes" style="height: 50px;padding: 3% 0;
+    <label for="altura2">Alto: </label> <span id=minimaAltura3 style="font-size: 10px; color: red;">(mín. 50 cm)</span>
+    <input type="text" class="" id="altura2" placeholder="Alto total texto cm" value="0" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">    
     
@@ -93,7 +95,7 @@
   <div class="col-sm-4">
       
     <label for="ancho2">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 240 cm)</span>
-    <input type="text" class="" id="ancho2" placeholder="Ancho total texto cm" value="68.853" readonly="yes" style="height: 50px;padding: 3% 0;
+    <input type="text" class="" id="ancho2" placeholder="Ancho total texto cm" value="0" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">
     <input type="hidden" class="form-control" id="anchoSVG2" value="0" readonly="yes">
@@ -109,8 +111,8 @@
 
   <div class="col-sm-4">
     
-    <label for="altura3">Alto: </label> <span style="font-size: 10px; color: red;">(mín. 11 cm)</span>
-    <input type="text" class="" id="altura3" placeholder="Alto total texto cm" value="11.000" readonly="yes" style="height: 50px;padding: 3% 0;
+    <label for="altura3">Alto: </label> <span id=minimaAltura4 style="font-size: 10px; color: red;">(mín. 50 cm)</span>
+    <input type="text" class="" id="altura3" placeholder="Alto total texto cm" value="0" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">    
     
@@ -119,7 +121,7 @@
   <div class="col-sm-4">
       
     <label for="ancho3">Ancho: </label> <span style="font-size: 10px; color: red;">(máx. 240 cm)</span>
-    <input type="text" class="" id="ancho3" placeholder="Ancho total texto cm" value="68.853" readonly="yes" style="height: 50px;padding: 3% 0;
+    <input type="text" class="" id="ancho3" placeholder="Ancho total texto cm" value="0" readonly="yes" style="height: 50px;padding: 3% 0;
   border-radius: 14px;
   border: 3px #ffffff solid; width: 200px;">
     <input type="hidden" class="form-control" id="anchoSVG3" value="0" readonly="yes">

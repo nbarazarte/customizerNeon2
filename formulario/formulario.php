@@ -67,7 +67,7 @@
           <div id="caja" class="row justify-content-md-center">
 
             <div id="muestra" class="col-md-auto neon_effect signatura_monoline_scriptRg amarillo">
-              Rótulos Metalarte
+              Rótulos Neón
             </div>
 
           </div>
@@ -146,7 +146,7 @@
                   <figure class="figure">
 
                     <input onclick="" type="radio" name="opcionesTiempos" id="dias" value="7 días laborables" checked onchange="deshabiltarBotonCart()">
-                    <label class="drinkcard-cc metacrilato" for="dias"></label>
+                    <label class="drinkcard-cc sieteDias" for="dias"></label>
 
                     <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 5px;">7 días laborables</figcaption>
 
@@ -155,7 +155,7 @@
                   <figure class="figure">
 
                     <input onclick="" type="radio" name="opcionesTiempos" id="horas" value="48 a 72 horas" onchange="deshabiltarBotonCart()">  
-                    <label class="drinkcard-cc metacrilato" for="horas"></label>
+                    <label class="drinkcard-cc setentaydosHoras" for="horas"></label>
 
                     <figcaption class="figure-caption text-center" style="font-size: 8px; color: #000000; position: relative; top: -21px; left: 3px;">48 a 72 horas</figcaption>
 
