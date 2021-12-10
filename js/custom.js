@@ -176,28 +176,44 @@ function jQueryDoSomethingAJAX() {
 
     var color = txt;
 
+    var anchocm     = 0;
+    var anchocm2    = 0;
+    var anchocm3    = 0;
+
+    var alturacm    = 0;
+    var alturacm2   = 0;
+    var alturacm3   = 0; 
+
+    var anchoSVG    = 0;
+    var anchoSVG2   = 0;
+    var anchoSVG3   = 0;
+
     //Línea 1:
-    var anchocm     = document.getElementById("ancho").value;//ancho;///72/0.393701;
-    var alturacm    = document.getElementById("altura").value;
+    anchocm     = document.getElementById("ancho").value;//ancho;///72/0.393701;
+    alturacm    = document.getElementById("altura").value;
 
     //Línea 2:
-    var anchocm2    = document.getElementById("ancho2").value;//ancho;///72/0.393701;
-    var alturacm2   = document.getElementById("altura2").value;
+    anchocm2    = document.getElementById("ancho2").value;//ancho;///72/0.393701;
+    alturacm2   = document.getElementById("altura2").value;
 
     //Línea 3:
-    var anchocm3    = document.getElementById("ancho3").value;//ancho;///72/0.393701;
-    var alturacm3   = document.getElementById("altura3").value;
+    anchocm3    = document.getElementById("ancho3").value;//ancho;///72/0.393701;
+    alturacm3   = document.getElementById("altura3").value;
 
     //ancho del SVG línea 1:
-    var anchoSVG    = document.getElementById('anchoSVG').value;
+    anchoSVG    = document.getElementById('anchoSVG').value;
     //ancho del SVG línea 2:
-    var anchoSVG2   = document.getElementById('anchoSVG2').value;
+    anchoSVG2   = document.getElementById('anchoSVG2').value;
     //ancho del SVG línea 3:
-    var anchoSVG3   = document.getElementById('anchoSVG3').value;
+    anchoSVG3   = document.getElementById('anchoSVG3').value;
 
-    var anchoSVGCorreccion  = anchoSVG * 0.76;
-    var anchoSVGCorreccion2 = anchoSVG2 * 0.76;
-    var anchoSVGCorreccion3 = anchoSVG3 * 0.76;
+    var anchoSVGCorreccion  = 0;
+    var anchoSVGCorreccion2 = 0;
+    var anchoSVGCorreccion3 = 0;
+
+    anchoSVGCorreccion  = anchoSVG * 0.76;
+    anchoSVGCorreccion2 = anchoSVG2 * 0.76;
+    anchoSVGCorreccion3 = anchoSVG3 * 0.76;
 
     var costoTransformador  = Number(document.getElementById('costoTransformador').value);
 
